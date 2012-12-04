@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="pref_disable_account">Disable</string>
+    
+    <string name="pref_tunnel">Tunnel</string>
+	<string name="pref_tunnel_host">Hostname</string>
+	<string name="pref_tunnel_port">Port</string>
+	<string name="pref_tunnel_mode">Mode</string>
+
+   	<!-- do not change order without changing corresponding entry_values in non_localizable_strings.xml -->
+	<string-array name="tunnel_mode_entries"> 
+		<item>disabled</item>
+		<item>3G only</item>
+		<item>always</item>
+		<item>auto</item>
+	</string-array> 
+
+    <string name="incall_notif_active">Audio call ongoing</string>
+    <string name="incall_notif_paused">Paused call ongoing</string>
+    <string name="incall_notif_video">Video capturing call ongoing</string>
+    
+    <string name="not_ready_to_make_new_call">Not ready for a new call</string>
+    <string name="bad_target_uri">Bad contact : %s</string>
+    <string name="reset_sas_fmt">Reset verified %s</string>
+    <string name="verify_sas_fmt">Verify %s</string>
+    <string name="communication_encrypted">Encrypted</string>
+   
+	<string name="waiting_for_startup">Starting up...</string>
+	<string name="couldnt_accept_call">An error occurred while accepting call</string>
+
+	<string name="error_adding_new_call">Error adding new call</string>
+	<string name="transfer_started">Transfer initiated</string>
+	<string name="transfer_dialog_title">Transfer call to</string>
+	<string name="transfer_to_new_call">New call</string>
+	<string name="resume_dialog_title">Resume call</string>
+	<string name="cannot_resume_paused_by_remote_call">Cannot resume call paused by remote</string>
+	<string name="conf_show_details_text">Show details</string>
+
+	<string name="skipable_error_service_not_ready">Warning: service is not ready</string>
+
+	<string name="close_button_text">Close</string>
+	
+	<string name="status_conf_call">conf</string>
+	<string name="status_active_call">active</string>
+	<string name="state_paused">paused</string>
+	<string name="state_paused_by_remote">paused by remote</string>
+	<string name="state_streams_running"></string>
+	<string name="state_incoming_received">incoming</string>
+	<string name="state_outgoing_ringing">ringing</string>
+	<string name="state_outgoing_progress">calling</string>
+	
+	<string name="mutemic_button_txt">Mute</string>
+	<string name="speaker_button_txt">Speaker</string>
+	<string name="bluetooth_button_txt">Bluetooth</string>
+
+	<string name="CancelButtonText">Cancel</string>
+	<string name="AddCallButtonText">Add call</string>
+	<string name="TransferCallButtonText">Transfer call</string>
+
+	<string name="conf_admin_choice_enter">Enter conference</string>
+	<string name="conf_admin_choice_leave">Momentarily leave conference</string>
+	<string name="conf_admin_choice_terminate">Terminate conference</string>
+
+	<string name="conf_choice_transfer_existing">Transfer to existing call</string>
+	<string name="conf_choice_transfer_new">Transfer to new call</string>
+	<string name="conf_choice_resume">Resume</string>
+	<string name="conf_choice_pause">Pause</string>
+	<string name="conf_choice_merge_to_conference">Add to conference</string>
+	<string name="conf_choice_merge_all_to_conference">Add all calls to conference</string>
+	<string name="conf_choice_remove_from_conference">Remove from the conference</string>
+	<string name="conf_choice_terminate">Terminate</string>
+
+	<string name="hangup">Hang up</string>
+	<string name="conf_simple_merge_bt_txt">Merge</string>
+	<string name="conf_simple_transfer_bt_txt">Transfer</string>
+	<string name="conf_simple_video_bt_txt">video</string>
+<!--	<string name="conf_simple_no_current_call">No active call</string>-->
+	<string name="show_send_dtmfs_button">Dialpad</string>
+
+	<string name="conf_conference">Conference</string>
+	<string name="in_conf">You are part of it</string>
+	<string name="in_conf_leave">Go out</string>
+	<string name="out_conf">You are out of it</string>
+	<string name="out_conf_enter">Go in</string>
+
+	<string name="pref_audio_hacks_title">Audio hacks</string>
+	<string name="pref_audio_use_specific_mode_title">Use specific mode hack</string>
+	<string name="pref_audio_use_specific_mode_summary">0=MODE_NORMAL (default), 2=MODE_IN_CALL</string>
+	<string name="pref_audio_hacks_use_routing_api_title">Use routing API hack</string>
+	<string name="pref_audio_hacks_use_galaxys_hack_title">Use Galaxy S audio hack</string>
+
+	<string name="pref_audio_soft_volume_title">Use software volume</string>
+
+	<string name="pref_ipv6_title">Use ipv6 instead of ipv4</string>
+
+	<string name="error_while_accepting_pending_call">Error while accepting pending call</string>
+	<string name="incoming_call_dialog_title">%s is calling you</string>
+	<string name="accept">Accept</string>
+	<string name="decline">Decline</string>
+	<string name="unknown_incoming_call_name">Unknown</string>
+	
+	<string name="pref_network_title">Network</string>
+	<string name="pref_transport_udp">UDP</string>
+	<string name="pref_transport_tcp">TCP</string>
+	<string name="pref_transport_tls">TLS</string>
+	<string name="pref_transport_use_standard_ports">Use standard ports</string>
+	<string name="at_least_a_protocol">At least one item is required</string>
+
+
+    <string name="first_launch_ok">Registration successful</string>
+    <string name="error">Error</string>
+    <string name="click_to_show_first_login_view">Start</string>
+    <string name="dialer_null_on_new_intent">Application not ready</string>
+
+
+	<string name="no_phone_numbers">No phone numbers found for %s</string>
+	<string name="filter_contacts">Filter contacts</string>
+	<string name="title_numbers_dialog">%s\'s phone numbers</string>
+    <string name="pref_delete_account">Delete this account</string>
+    <string name="pref_default_account_title">Use as default</string>
+    <string name="pref_echo_canceller_calibration">Echo canceller calibration</string>
+    <string name="pref_echo_limiter">Echo limiter</string>
+    <string name="pref_video_use_front_camera_title">Use front camera</string>
+	<string name="pref_video">Video</string>
+	<string name="pref_preferences">Preferences</string>
+    <string name="pref_video_codec_h263_title">H263</string>
+    <string name="pref_video_codec_mpeg4_title">MPEG4</string>
+    <string name="pref_video_codec_h264_title">H264</string>
+    <string name="pref_video_codecs_title">Codecs</string>
+    <string name="pref_video_codecs_key">pref_video_codecs_key</string>
+	<string name="menu_videocall_back_to_dialer_title">Display dialer</string>
+	<string name="menu_videocall_switch_camera_title">Front/Rear Camera</string>
+	<string name="menu_videocall_change_resolution_when_low_resolution">Try High resolution</string>
+	<string name="menu_videocall_change_resolution_when_high_resolution">Low resolution</string>
+	<string name="menu_videocall_change_resolution_title">Change resolution</string>
+    <string name="menu_videocall_toggle_camera_title">Mute/Unmute camera</string>
+	<string name="menu_videocall_toggle_camera_disable">Disable camera</string>
+	<string name="menu_videocall_toggle_camera_enable">Enable camera</string>
+	<string name="menu_videocall_terminate_call_title">Terminate call</string>
+    <string name="pref_video_settings_title">Video settings</string>
+    <string name="pref_video_automatically_share_my_video_title">Share my camera</string>
+    <string name="pref_video_automatically_accept_video_title">Accept incoming camera</string>
+    <string name="pref_video_automatically_share_my_video">Automatically send my camera</string>
+    <string name="pref_video_automatically_accept_video">Automatically accept correspondent\'s camera</string>
+    <string name="pref_video_initiate_call_with_video_title">Initiate video calls</string>
+    <string name="pref_video_initiate_call_with_video"></string>
+    <string name="pref_video_enable_title">Enable Video</string>
+    <string name="pref_escape_plus">Replace + by 00</string>
+    <string name="pref_ilbc_summary">iLBC might be unavailable depending on ARM processor and Android OS version.</string>
+    <string name="pref_echo_cancellation">Echo cancellation</string>
+    <string name="pref_autostart">Start at boot time</string>
+    <string name="pref_enable_outbound_proxy">Outbound proxy</string>
+    <string name="pref_codec_pcma">pcma</string>
+    <string name="pref_codec_pcmu">pcmu</string>
+    <string name="pref_codec_gsm">gsm</string>
+    <string name="pref_codec_g722">g722</string>
+    <string name="pref_codec_amr">amr</string>
+    <string name="pref_codec_amrwb">amr-wb</string>
+    <string name="pref_codec_ilbc">ilbc</string>
+    <string name="pref_codec_speex8">speex 8 Khz</string>
+    <string name="pref_codec_speex16">speex 16 Khz</string>
+    <string name="pref_codec_silk8">silk 8 Khz</string>
+    <string name="pref_codec_silk12">silk 12 Khz</string>
+    <string name="pref_codec_silk16">silk 16 Khz</string>
+    <string name="pref_codec_silk24">silk 24 Khz</string>
+    <string name="pref_codec_g729">g729</string>
+    <string name="pref_codecs">Codecs</string>
+    <string name="place_call_chooser">Place a call</string>
+<string name="pref_debug">Debug</string>
+<string name="about_report_issue">Report issue</string>
+<string name="about_bugreport_email_text">Describe problem here</string>
+<string name="about_error_generating_bugreport_attachement">Error generating bug report</string>
+<string name="about_logs_not_found">Logs not found.</string>
+<string name="about_reading_logs">Reading logs, may takes time...</string>
+<string name="about_mailer_chooser_text">Send bug report with...</string>
+<string name="menu_about">About</string>
+<string name="pref_audio">Audio</string>
+<string name="menu_exit">Exit</string>
+<string name="pref_prefix">Prefix</string>
+<string name="pref_advanced">Advanced</string>
+<string name="menu_settings">Settings</string>
+<string name="pref_proxy">Proxy</string>
+<string name="pref_domain">Domain*</string>
+<string name="pref_passwd">Password*</string>
+<string name="pref_username">Username*</string>
+<string name="hello">Hello World, Linphone!</string>
+<string name="pref_sipaccount">SIP Account</string>
+<string name="wrong_username">wrong user name</string>
+<string name="wrong_passwd">wrong password</string>
+<string name="wrong_domain">Wrong domain</string>
+<string name="wrong_settings">Wrong settings</string>
+<string name="tab_dialer">Dialer</string>
+<string name="tab_contact">Contact</string>
+<string name="call_error">Cannot call %s</string>
+<string name="yes">Yes</string>
+<string name="no">No</string>
+<string name="dismiss">Dismiss</string>
+<string name="cont">Continue</string>
+<string name="never_remind">Never remind me</string>
+<string name="config_error">%s, do you want to go to the settings page ?</string>
+<string name="initial_config_error">&lt;P ALIGN=CENTER&gt;No SIP account has been configured yet, do you want to go to the settings page ?&lt;br/&gt;&lt;br/&gt; Need help ?&lt;br/&gt; &quot;http://www.linphone.org/m/help&quot;&lt;/p&gt;</string>
+<string name="first_launch_message">&lt;P ALIGN=CENTER&gt;Welcome to Linphone SIP phone&lt;br/&gt;&lt;br/&gt; If you are new to SIP, have a look at&lt;br/&gt; &quot;http://www.linphone.org/m/help&quot;&lt;/p&gt; </string>
+<string name="ec_calibration_launch_message">Starting echo cancelation audio calibration </string>
+<string name="warning_already_incall">Cannot initiate a new call because a call is already engaged</string>
+<string name="tab_history">History</string>
+<string name="warning_wrong_destination_address">Cannot build destination address from [%s]</string>
+<string name="menu_clear_history">Clear</string>
+<string name="error_cannot_get_call_parameters">Cannot get call parameters</string>
+<string name="error_cannot_create_default_parameters">Cannot create default call parameters</string>
+<string name="error_cannot_invite_address">Cannot invite destination address [%s]</string>
+
+<string name="notification_started">started</string>
+<string name="pref_echo_cancellation_summary">Removes the echo heard by other end (not recommended)</string>
+<string name="pref_echo_limiter_summary">Removes the echo heard by other end (brute force method)</string>
+<string name="pref_stun_server">Stun server</string>
+<string name="ec_calibrating">Calibrating...</string>
+<string name="ec_calibrated">Calibrated [%s ms]</string>
+<string name="failed">failed</string>
+<string name="first_login_explanation">Enter your username and password to connect to the service.</string>
+<string name="first_login_username">Username</string>
+<string name="first_login_password">Password</string>
+<string name="first_login_connect">Connect</string>
+<string name="first_launch_no_login_password">Please enter your login and password</string>
+<string name="first_launch_bad_login_password">Couldn\'t connect; check your login and password and start again</string>
+
+<string name="pref_amr_summary">AMR codec might not be present on your phone</string>
+<string name="pref_video_codec_vp8_title">VP8</string>
+<string name="pref_media_encryption">Media encryption</string>
+<string name="media_encryption_none">None</string>
+<string name="media_encryption_srtp">SRTP</string>
+<string name="media_encryption_zrtp">ZRTP</string>
+
+<string name="dynamic_video_asking">Your correspondent would like to switch to video</string>
+<string name="dynamic_video_accept">Accept video</string>
+<string name="dynamic_video_deny">Deny video</string>
+
+<string name="pref_extra_accounts">pref_nb_accounts_extra</string>
+<string name="pref_default_account">pref_default_account</string>
+<string name="pref_sipaccounts">SIP Accounts</string>
+
+<string name="pref_wifi_only">Use wifi only</string>
+
+<string name="wizard_username_hint">Username</string>
+<string name="wizard_password_hint">Password</string>
+<string name="wizard_password_confirm_hint">Confirmation</string>
+<string name="wizard_email_hint">Email</string>
+<string name="wizard_title">Account Wizard</string>
+<string name="wizard_create_account">Create Account</string>
+<string name="wizard_cancel">Cancel</string>
+<string name="wizard_failed">An error occurred, try again later.</string>
+<string name="wizard_server_unavailable">Server unreachable, verify your internet connection.</string>
+<string name="wizard_username_unavailable">This username is already in use.</string>
+<string name="wizard_username_incorrect">Your username is not valid.</string>
+<string name="wizard_email_incorrect">Your email is not valid.</string>
+<string name="wizard_password_incorrect">Your password is not valid (6 characters min).</string>
+<string name="wizard_passwords_unmatched">Passwords entered are different.</string>
+<string name="wizard_need_activation">You need to activate your account with the link that was send to your email.</string>
+<string name="wizard_confirmation">Confirmation</string>
+<string name="wizard_verify_account">Check</string>
+
+<string name="pref_help_proxy">SIP proxy hostname or ip address (optional)</string>
+<string name="pref_help_outbound_proxy">Route all calls through SIP proxy</string>
+<string name="pref_help_username">Example: john if your account is john@sip.linphone.org</string>
+<string name="pref_help_domain">sip.linphone.org if your account is john@sip.linphone.org</string>
+</resources>

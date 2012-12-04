@@ -1,0 +1,8 @@
+libs
+obj
+gen
+bin
+doc
+ant.properties
+local.properties
+project.properties

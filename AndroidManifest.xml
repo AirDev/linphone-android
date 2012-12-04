@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="org.linphone"
+      android:versionCode="1320" android:versionName="1.3.2"  android:installLocation="auto"> 
+    <uses-sdk android:minSdkVersion="4"/>
+    
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+	<uses-permission android:name="android.permission.READ_CONTACTS"/>
+	<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+	<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+	<uses-permission android:name="android.permission.CALL_PHONE"/>
+	<!-- Needed to allow Linphone to install on tablets, since android.permission.CALL_PHONE implies android.hardware.telephony is required -->
+	<uses-feature 	 android:name="android.hardware.telephony" android:required="false" /> 
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+	<uses-permission android:name="android.permission.VIBRATE"/>
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.READ_LOGS" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	
+	<supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" android:anyDensity="true"/>
+    
+    <!-- Don't remove the space after android:debuggable: it prevents ndk-build to try including gdbserver and crash gcc -->
+    <application android:label="@string/app_name" android:debuggable ="true" android:icon="@drawable/logo_linphone_57x57">
+
+		<activity android:name="org.linphone.LinphoneLauncherActivity"
+		    android:label="@string/app_name"
+		    android:theme="@android:style/Theme.NoTitleBar">
+		    <intent-filter>
+		        <action android:name="android.intent.action.MAIN" />
+		        <category android:name="android.intent.category.LAUNCHER" />
+		    </intent-filter>
+            
+            <intent-filter>
+                <action android:name="android.intent.action.CALL" />
+                <action android:name="android.intent.action.CALL_PRIVILEGED" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="tel" />
+                <data android:scheme="sip" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="sip" /><!-- maybe one day -->
+                <data android:scheme="imto" />
+			 </intent-filter>
+		</activity>
+
+
+
+		<activity android:name="org.linphone.LinphoneActivity"
+                  android:label="@string/app_name"
+                  android:theme="@android:style/Theme.NoTitleBar"
+                  android:launchMode="singleTask"
+                  > <!-- android:alwaysRetainTaskState="true" clearTaskOnLaunch="false"-->
+                  
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name="org.linphone.IncomingCallActivity"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+         </activity>
+
+        <activity android:name="org.linphone.UriPickerActivity"
+        	android:theme="@android:style/Theme.NoTitleBar"
+        	android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+         </activity>
+        <activity android:name="org.linphone.UriPickerActivity$DialerActivity" android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+         </activity>
+
+        <activity android:name="org.linphone.FirstLoginActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+         </activity>
+<!--                    android:launchMode="singleTask"-->
+            <activity android:name="org.linphone.IncallActivity"
+                    android:theme="@android:style/Theme.NoTitleBar"
+                    android:launchMode="singleTask"
+                    android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+         </activity>
+        <activity android:name="org.linphone.ConferenceDetailsActivity"
+                    android:theme="@android:style/Theme.NoTitleBar"
+                    android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+         </activity>
+        <activity android:name="org.linphone.LinphonePreferencesSIPAccountActivity"></activity>
+        <activity android:name="org.linphone.LinphonePreferencesActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+         </activity>
+        <activity android:name="org.linphone.DialerActivity"
+                  android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+         </activity>
+         <activity android:name="org.linphone.VideoCallActivity"
+          android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+          android:launchMode="singleInstance"
+          android:configChanges="orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+         </activity>
+        <activity android:name="ContactPickerActivityNew" android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+         </activity>
+         <activity android:name="ContactPickerActivityOld" android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+         </activity>
+		 <activity android:name="org.linphone.HistoryActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+         </activity>         
+		 <activity android:name="org.linphone.AboutActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+         </activity>
+
+
+
+    <service android:name="org.linphone.LinphoneService" />
+        
+	<receiver android:name="org.linphone.NetworkManager">
+		<intent-filter><action android:name="android.net.conn.CONNECTIVITY_CHANGE"></action></intent-filter>
+	</receiver>
+
+	<receiver android:name="org.linphone.BootReceiver">
+		<intent-filter><action android:name="android.intent.action.BOOT_COMPLETED"></action></intent-filter>
+	</receiver>
+
+	<receiver android:name="org.linphone.PhoneStateChangedReceiver">
+		<intent-filter><action android:name="android.intent.action.PHONE_STATE" /></intent-filter>
+	</receiver>
+	
+	
+		<activity android:name="org.linphone.TestConferenceActivity"
+                  android:label="Conf test"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+         </activity>
+
+         <activity android:name="org.linphone.core.tutorials.TutorialHelloWorldActivity"
+                  android:label="Hello World"
+                  android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+         </activity>
+         <activity android:name="org.linphone.core.tutorials.TutorialRegistrationActivity"
+                  android:label="Registration"
+                  android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+         </activity>
+         <activity android:name="org.linphone.core.tutorials.TutorialBuddyStatusActivity"
+                  android:label="Buddy status"
+                  android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+         </activity>
+         <activity android:name="org.linphone.core.tutorials.TutorialChatRoomActivity"
+                  android:label="Chat Room"
+                  android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+         </activity>
+         <activity android:name="org.mediastreamer2.test.Ring"
+                  android:label="Ring+Echo"
+                  android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+         </activity>
+</application>
+
+</manifest> 
